@@ -34,7 +34,25 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+st.markdown("""
+<style>
+.block-container {
+    padding-top: 1rem;
+}
 
+h1 {
+    color: #00C896;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 2rem;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #1e1e2f;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ---------------------------------------------------------------------------
 # Data loading (cached)
@@ -83,7 +101,8 @@ def fmt_num(x, decimals=2):
 # ---------------------------------------------------------------------------
 # Sidebar navigation
 # ---------------------------------------------------------------------------
-st.sidebar.title(" NIFTY-50 Investment\nIntelligence Platform")
+st.sidebar.title("NIFTY-50")
+st.sidebar.markdown("### Investment Intelligence Platform")
 page = st.sidebar.radio(
     "Navigate",
     [
@@ -109,11 +128,12 @@ st.sidebar.caption(
 # ===========================================================================
 if page == " Market Overview":
     st.title(" NIFTY-50 Market Overview")
-    st.markdown(
-        "An overview of the NIFTY-50 index constituents using historical "
-        "data from **January 2000 to April 2021**. Use the sidebar to "
-        "explore individual stocks, predictions, risk and portfolios."
-    )
+    st.markdown("""
+### Analyze • Predict • Manage Risk • Build Portfolios
+
+A complete investment analytics platform built on
+NIFTY-50 historical market data.
+""")
 
     lookback = st.slider("Lookback period for stats (years)", 1, 10, 5)
     stats = get_stats_table(data, lookback)
@@ -338,7 +358,7 @@ elif page == " Stock Predictor":
 # PAGE 4: RISK ASSESSMENT
 # ===========================================================================
 elif page == " Risk Assessment":
-    st.title(" Risk Assessment")
+    st.title("⚠️ Risk Assessment")
 
     tab1, tab2 = st.tabs(["Single Stock", "Compare Multiple Stocks"])
 
@@ -412,8 +432,8 @@ elif page == " Risk Assessment":
 # ===========================================================================
 # PAGE 5: PORTFOLIO CONSTRUCTION
 # ===========================================================================
-elif page == " Portfolio Construction":
-    st.title(" Portfolio Construction")
+elif page == "Portfolio Construction":
+    st.title("Portfolio Construction")
     st.markdown(
         "Generates a recommended portfolio allocation for three investor "
         "profiles using **Modern Portfolio Theory** (mean-variance "
@@ -426,8 +446,12 @@ elif page == " Portfolio Construction":
         profile = st.selectbox("Select Investor Profile", list(PROFILE_CONFIG.keys()))
     with col2:
         lookback = st.slider("Lookback period (years)", 2, 10, 5)
-
-    result = get_portfolio(data, profile, lookback)
+#added exception to handle any potential error streamliy
+    try:
+        result = get_portfolio(data, profile, lookback)
+    except Exception as e:
+        st.error(f"Portfolio Error: {e}")
+        st.stop()
 
     st.info(f"**{profile} Investor**: {result['description']}")
 
@@ -544,6 +568,3 @@ st.sidebar.caption(
     "built on historical NIFTY-50 data (Jan 2000 – Apr 2021). Predictions "
     "and recommendations do not constitute financial advice."
 )
-import streamlit as st
-
-st.title("Investment Buddy")
