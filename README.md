@@ -123,24 +123,20 @@ python build_report.py        # rebuilds Technical_Report.pdf
 ## 📁 Project Structure
 
 ```
-project/
-├── app.py                     # Streamlit dashboard (entry point)
-├── requirements.txt           # Python dependencies
+NIFTY_50_STOCK_PLATFORM/
 ├── README.md
-├── data/
-│   ├── NIFTY50_all.csv         # Consolidated historical OHLCV data (50 stocks, 2000-2021)
-│   └── NSE_Symbols.csv         # NSE symbol -> company name reference
+├── app.py
+├── requirements.txt
+├── docs/
+│   ├── market_overview.png
+│   ├── stock_analysis.png
+│   ├── stock_predictor_engine.png
+│   ├── risk_assessment.png
+│   ├── portfolio_construction.png
+│   └── market_anomaly.png
 ├── src/
-│   ├── data_utils.py            # Data loading, symbol consolidation, sector mapping
-│   ├── indicators.py            # Technical indicators (MA, EMA, RSI, MACD, Bollinger, etc.)
-│   ├── predictor.py              # Stock predictor engine (RF regression + classification)
-│   ├── risk.py                   # Risk metrics (Sharpe, Sortino, drawdown, VaR, beta)
-│   ├── portfolio.py               # Mean-variance portfolio construction
-│   └── anomaly.py                  # Market anomaly & drawdown detection
-└── report/
-    ├── generate_analysis.py        # Regenerates all report figures/stats
-    ├── build_report.py             # Builds Technical_Report.pdf
-    └── figs/                        # Generated chart images
+├── data/
+└── Technical_Report/
 ```
 
 ---
