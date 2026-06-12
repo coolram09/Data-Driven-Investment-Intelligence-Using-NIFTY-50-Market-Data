@@ -33,8 +33,20 @@ through an interactive Streamlit interface.
  ### Live Demo
 
 🔗 Streamlit App: https://data-driven-investment-intelligence-using-nifty-50-market-data.streamlit.app/
+####  Dashboard Preview
+![Dashboard Preview](dashboard.png)
+<details>
+<summary>View More Screenshots</summary>
 
-Demo-![Dashboard Screenshot](screenshot.png)
+![Stock Analysis](docs/stock_analysis.png)
+
+![Stock Predictor](docs/stock_predictor.png)
+
+![Risk Assessment](docs/risk_assessment.png)
+
+![Portfolio Construction](docs/portfolio_construction.png)
+
+</details>
 
 
 
