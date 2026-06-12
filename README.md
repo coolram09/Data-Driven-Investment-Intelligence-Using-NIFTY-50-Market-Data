@@ -1,4 +1,4 @@
-# <img width="48" height="48" alt="icons8-stocks-48 apng" src="https://github.com/user-attachments/assets/f73514a7-057e-47a9-b163-4a31400121e2" />
+
 NIFTY-50 Investment Intelligence Platform
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
@@ -33,18 +33,22 @@ through an interactive Streamlit interface.
  ### Live Demo
 
 🔗 Streamlit App: https://data-driven-investment-intelligence-using-nifty-50-market-data.streamlit.app/
-####  Dashboard Preview
-![Dashboard Preview](dashboard.png)
+#### Application Preview
+
+![Market Overview](docs/market_overview.png)
+
 <details>
-<summary>View More Screenshots</summary>
+<summary>View More</summary>
 
 ![Stock Analysis](docs/stock_analysis.png)
 
-![Stock Predictor](docs/stock_predictor.png)
+![Stock Predictor](docs/stock_predictor_engine.png)
 
 ![Risk Assessment](docs/risk_assessment.png)
 
 ![Portfolio Construction](docs/portfolio_construction.png)
+
+![Market Anomaly](docs/market_anomaly.png)
 
 </details>
 
