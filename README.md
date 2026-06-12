@@ -1,5 +1,5 @@
 
-NIFTY-50 Investment Intelligence Platform
+# NIFTY-50 Investment Intelligence Platform
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Built with Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
