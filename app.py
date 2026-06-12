@@ -358,7 +358,7 @@ elif page == " Stock Predictor":
 # PAGE 4: RISK ASSESSMENT
 # ===========================================================================
 elif page == " Risk Assessment":
-    st.title("⚠️ Risk Assessment")
+    st.title(" Risk Assessment")
 
     tab1, tab2 = st.tabs(["Single Stock", "Compare Multiple Stocks"])
 
