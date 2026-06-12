@@ -159,6 +159,7 @@ NIFTY_50_STOCK_PLATFORM/
   plus peak-to-trough drawdown episode detection (≥30%).
 
 For full details,📄 [Technical Report](Technical_Report/Technical_Report.pdf)
+> **Note:** If the GitHub preview does not load, download the PDF to view the full report.
 
 ---
 
