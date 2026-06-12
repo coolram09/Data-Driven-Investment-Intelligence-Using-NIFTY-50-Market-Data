@@ -158,7 +158,7 @@ NIFTY_50_STOCK_PLATFORM/
 - **Anomaly Detection**: Rolling Z-score thresholds on returns and volume,
   plus peak-to-trough drawdown episode detection (≥30%).
 
-For full details, see [`Technical_Report.pdf`](Technical_Report.pdf).
+For full details,📄 [Technical Report](Technical_Report/Technical_Report.pdf)
 
 ---
 
